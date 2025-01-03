@@ -9,16 +9,29 @@ size: 4
 "craftEffect": "smeltsmoke",
 "updateEffect": "none",
 
+drawer: {
+    type: "DrawMulti"
+    layers: [
+        "blocks/production/alloy-kiln"  # Основная текстура
+        {
+            type: "DrawFlame"
+            region: "blocks/production/alloy-kiln-top"  # Анимация свещения
+            flameColor: "F9F7A9FF"  # Цвет свечения
+            enabled: "this.built && this.power > 0"  # Свечение только когда фабрика работает
+        }
+    ]
+}
+
 consumes: {
-	power: 1
-	items: {
-		items: [
-			silicon/9
-			titanium/6
-			copper/8
-			lead/8
-		]
-	}
+    power: 1
+    items: {
+        items: [
+            silicon/9
+            titanium/6
+            copper/8
+            lead/8
+        ]
+    }
 }
 
 outputItem: surge-alloy/6
@@ -26,20 +39,20 @@ outputItem: surge-alloy/6
 category: crafting
 
 requirements: [
-	surge-alloy/300
-	plastanium/230
-	titanium/320
-	silicon/230
-	lead/330
+    surge-alloy/300
+    plastanium/230
+    titanium/320
+    silicon/230
+    lead/330
 ]
 
 research: {
-	requirements: [
-		surge-alloy/300
-		plastanium/230
-		titanium/320
-		silicon/230
-		lead/330
-	]
-	parent: exogenesis-production
+    requirements: [
+        surge-alloy/300
+        plastanium/230
+        titanium/320
+        silicon/230
+        lead/330
+    ]
+    parent: exogenesis-production
 }
