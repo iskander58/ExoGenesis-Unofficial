@@ -17,7 +17,7 @@ drawer: {
             type: "DrawFlame"
             region: "blocks/production/alloy-kiln-top" 
             flameColor: "F9F7A9FF"  # Цвет свечения
-            enabled: "this.built && this.power > 0"  # Свечение только когда фабрика работает
+            enabled: "this.built && this.power > 0"  
         }
     ]
 }
